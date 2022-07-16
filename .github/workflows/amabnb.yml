@@ -70,7 +70,7 @@ jobs:
           source: "./deploy/*"
           target: "/var/test"
           strip_components: 1
-##
+###
 #      - name: Upload coverage to Codecov
 #        uses: codecov/codecov-action@v3
 #        with:
