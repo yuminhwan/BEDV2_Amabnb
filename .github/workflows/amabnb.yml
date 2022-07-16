@@ -70,6 +70,19 @@ jobs:
           source: "./deploy/*"
           target: "/home/ec2-user/test"
           strip_components: 1
+
+      - name: EC2 배포 실행
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /home/ec2-user/test
+            bash deploy.sh \
+            ${{ secrets.DOCKER_USERNAME }} \
+            ${{ secrets.DOCKER_REPOSITORY }} \
+            ${{ secrets.DOCKER_TAG_DEV }}
 ###
 #      - name: Upload coverage to Codecov
 #        uses: codecov/codecov-action@v3
