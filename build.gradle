@@ -12,6 +12,7 @@ plugins {
     // queryDsl
     id "com.ewerk.gradle.plugins.querydsl" version "1.0.10"
     id 'jacoco'
+    id "org.sonarqube" version "3.0"
 }
 
 jacoco {
