@@ -1,0 +1,3 @@
+[submodule "submoudle-test"]
+	path = submoudle-test
+	url = https://github.com/dya-mond/submoudle-test.git
